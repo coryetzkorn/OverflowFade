@@ -1,0 +1,212 @@
+/* Required Plugin CSS
+-------------------------------*/
+.overflow-fade-horizontal,
+.overflow-fade-vertical {
+  position: relative;
+  overflow: hidden; }
+  .overflow-fade-horizontal:before, .overflow-fade-horizontal:after,
+  .overflow-fade-vertical:before,
+  .overflow-fade-vertical:after {
+    content: '';
+    display: block;
+    position: absolute; }
+  .overflow-fade-horizontal.scroll-start:before, .overflow-fade-horizontal.scroll-end:after,
+  .overflow-fade-vertical.scroll-start:before,
+  .overflow-fade-vertical.scroll-end:after {
+    display: none; }
+  .overflow-fade-horizontal .overflow-scrollable,
+  .overflow-fade-vertical .overflow-scrollable {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch; }
+  .overflow-fade-horizontal ul,
+  .overflow-fade-vertical ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+    .overflow-fade-horizontal ul li,
+    .overflow-fade-vertical ul li {
+      display: block;
+      list-style: none; }
+
+/* Horizontal Fade */
+.overflow-fade-horizontal .overflow-scrollable {
+  overflow-x: scroll; }
+.overflow-fade-horizontal ul li {
+  float: left; }
+.overflow-fade-horizontal:before, .overflow-fade-horizontal:after {
+  top: 0;
+  width: 40px;
+  height: 100%;
+  display: block; }
+.overflow-fade-horizontal:before {
+  background: -moz-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */ }
+.overflow-fade-horizontal:after {
+  right: 0;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, white));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */ }
+
+/* Vertical Fade */
+.overflow-fade-vertical .overflow-scrollable {
+  overflow-y: scroll;
+  height: 100%; }
+.overflow-fade-vertical:before, .overflow-fade-vertical:after {
+  width: 100%;
+  height: 30px;
+  display: block; }
+.overflow-fade-vertical:before {
+  background: -moz-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-9 */ }
+.overflow-fade-vertical:after {
+  bottom: 0;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, white));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */ }
+
+/* Custom Styles
+-------------------------------*/
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "sofia-pro",sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  color: #1FC370;
+  font-size: 80px;
+  text-align: center; }
+
+section {
+  padding: 40px; }
+
+.some-container {
+  font-size: 20px;
+  width: 40%;
+  max-width: 400px;
+  margin: 40px auto; }
+  .some-container ul li {
+    margin: 0 10px;
+    padding: 10px 0; }
+  .some-container hr {
+    margin: 40px 0; }
+  .some-container .overflow-fade-vertical {
+    height: 200px; }
+  .some-container a {
+    color: #000; }
+
+.black {
+  background: #000;
+  color: #fff; }
+  .black a {
+    color: #fff; }
+  .black .overflow-fade-horizontal:before {
+    background: -moz-linear-gradient(left, black 0%, transparent 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, black), color-stop(100%, transparent));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, black 0%, transparent 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, black 0%, transparent 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, black 0%, transparent 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, black 0%, transparent 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+    /* IE6-9 */ }
+  .black .overflow-fade-horizontal:after {
+    right: 0;
+    background: -moz-linear-gradient(left, transparent 0%, black 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(100%, black));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, transparent 0%, black 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, transparent 0%, black 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, transparent 0%, black 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, transparent 0%, black 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+    /* IE6-9 */ }
+  .black .overflow-fade-vertical:before {
+    background: -moz-linear-gradient(top, black 0%, transparent 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, transparent));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, black 0%, transparent 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, black 0%, transparent 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, black 0%, transparent 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+    /* IE6-9 */ }
+  .black .overflow-fade-vertical:after {
+    bottom: 0;
+    background: -moz-linear-gradient(top, transparent 0%, black 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, black));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, transparent 0%, black 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, transparent 0%, black 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, transparent 0%, black 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+    /* IE6-9 */ }
+
+/*# sourceMappingURL=overflowFade.css.map */
