@@ -26,7 +26,7 @@
         
         if(settings.direction == 'horizontal') {
           $(this).addClass('overflow-fade-horizontal');
-          var innerWidth = 2;
+          var innerWidth = 0;
           wrapperEl.find('li').each(function() {
             innerWidth += $(this).outerWidth(true);
           });
@@ -60,7 +60,7 @@
               wrapperEl.removeClass('scroll-end');
             }
           });
-        }      
+        } 
       });
     },
     destroy : function( ) {
